@@ -10,9 +10,14 @@ function App() {
 
       <h2>Version: {pkg.version}</h2>
 
-      <button onClick={() => setCount(count + 1)}>
-        Count: {count}
-      </button>
+      <div style={{ display: "flex", gap: "10px", justifyContent: "center", alignItems: "center" }}>
+        <button onClick={() => setCount(count + 1)}>
+          Count: {count}
+        </button>
+        <button onClick={() => setCount(0)}>
+          Reset
+        </button>
+      </div>
     </div>
   );
 }

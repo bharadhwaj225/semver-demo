@@ -5,18 +5,30 @@ function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <div style={{ padding: "20px" }}>
-      <h1>Semantic Version Demo</h1>
+    <div style={{
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      justifyContent: "center",
+      height: "100vh",
+      fontFamily: "Arial"
+    }}>
+      <h1>🚀 Version {pkg.version}</h1>
 
-      <h2>Version: {pkg.version}</h2>
+      <div style={{
+        border: "2px solid #333",
+        padding: "20px",
+        borderRadius: "10px",
+        textAlign: "center"
+      }}>
+        <h2>Counter: {count}</h2>
 
-      <div style={{ display: "flex", gap: "10px", justifyContent: "center", alignItems: "center" }}>
         <button onClick={() => setCount(count + 1)}>
-          Count: {count}
+          ➕ Increment
         </button>
-        <p>Double count: {count * 2}</p>
-        <button onClick={() => setCount(0)}>
-          Reset
+
+        <button onClick={() => setCount(0)} style={{ marginLeft: "10px" }}>
+          🔄 Reset
         </button>
       </div>
     </div>

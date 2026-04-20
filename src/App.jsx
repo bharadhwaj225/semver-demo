@@ -14,6 +14,7 @@ function App() {
         <button onClick={() => setCount(count + 1)}>
           Count: {count}
         </button>
+        <p>Double count: {count * 2}</p>
         <button onClick={() => setCount(0)}>
           Reset
         </button>
